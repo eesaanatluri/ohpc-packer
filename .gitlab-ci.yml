@@ -1,0 +1,20 @@
+variables:
+  GIT_SUBMODULE_STRATEGY: recursive
+
+stages:
+  - validate
+  - build
+
+validate:
+  stage: validate
+  script:
+    - packer validate build.json
+
+build:
+  stage: build
+  script:
+    - source /home/centos/app-cred-ohpc-openrc.sh
+    - python gen-vars.py
+    - packer build -var-file=vars-test.json build.json
+  dependencies:
+    - validate
