@@ -27,6 +27,14 @@
    },
 
    {
+      "type": "ansible-local",
+      "playbook_file": "CRI_XCBC/site-build.yaml",
+      "playbook_dir": "CRI_XCBC",
+      "inventory_file": "CRI_XCBC/hosts",
+      "extra_arguments": [ "-b",  "-l `hostname -s`" ]
+   },
+
+   {
     "type": "file",
     "source": "CRI_Cluster_Monitor/",
     "destination": "/CRI_Cluster_Monitor/"
