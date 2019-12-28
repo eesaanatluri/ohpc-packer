@@ -31,6 +31,14 @@
       "playbook_dir": "CRI_XCBC",
       "inventory_file": "CRI_XCBC/hosts",
       "extra_arguments": [ "-b",  "-l `hostname -s`" ]
+   },
+
+   {
+      "type": "ansible-local",
+      "playbook_file": "CRI_Cluster_Monitor/clustermon.yml",
+      "playbook_dir": "CRI_Cluster_Monitor",
+      "inventory_file": "CRI_XCBC/hosts",
+      "extra_arguments": [ "-b",  "-l `hostname -s`" ]
    }
   ]
 }
