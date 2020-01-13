@@ -40,6 +40,12 @@
    },
 
    {
+    "type": "file",
+    "source": "slurmdb_backup_20191014_032723.tar.gz",
+    "destination": "/home/centos/"
+   },
+
+   {
     "type": "shell",
     "inline": [
       "sudo ansible-playbook -c local -i /CRI_XCBC/hosts -l `hostname -s` /CRI_XCBC/site-build.yaml -b",
