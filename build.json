@@ -46,6 +46,12 @@
    },
 
    {
+    "type": "file",
+    "source": "hierarchy-files.tar.gz",
+    "destination": "/home/centos/"
+   },
+   
+   {
     "type": "shell",
     "inline": [
       "sudo ansible-playbook -c local -i /CRI_XCBC/hosts -l `hostname -s` /CRI_XCBC/site-build.yaml -b",
